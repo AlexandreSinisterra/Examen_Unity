@@ -59,4 +59,28 @@ Por ultimo cree un script con la funcion Update, que basicamente ira rotando el 
 ### Extra
 
 Hay cosas extra que realice que puedes ver como lo de los enemigos, cree una variable de vida al jugador y los enemigos le hace daño, si lo matan la bola desaparece y pierdes. Si recoges todos los pickups ganas y puedes matar a los cubos
-  
+
+## Parte 2
+
+Parte 2 del examen
+
+### basicos
+
+añadi lo basico que esta descrito del tutorial, como el movimiento de la bola.
+
+### movimiento enemigo
+
+Funciona parecido a la cámara explicada en el tutorial. 
+
+- se tienen que añadir las variables de rango de activacion y velocidad del enemigo.
+- ademas cree una variable que almacena si el jugador esta cerca o no.
+- El codigo funciona comparando las distancias del enemigo y del jugador, si es mayor al rango, pone que esta lejos y no hace nada; pero si entra en el rango el enemigo va hacia el jugador, restando 2 puntos (la posicion del player y enemigo) y así creando un vector al que solo tenemos que añadir la velocidad del enemigo.
+- Esta dentro de una funcion "Update" para que se vaya actualizando al posicion a cada rato.
+
+### colision del enemigo
+
+Este es muy sencillo, se utilizan las funciones "OnCollision" y dentro de ellas se comprueba el tag de lo que esta tocando para asegurar que sea el jugador. Hay 3 tipos de "OnCollision":
+
+- OnCollisionEnter -> cuando justo lo toca
+- OnCollisionStay -> si lo sigue tocando
+- OnCollisionExit -> cuando justo lo deja de tocar
